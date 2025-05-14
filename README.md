@@ -6,6 +6,8 @@ To start i want to get some credits out of the way, as a disclaimer
 
 ## Disclaimer: I DID NOT discover 99.99% of this myself, it was the efforts of others much smarter than myself and they are credited below. I am just writing this up
 
+# also there's gonna be typos i wrote this at like 12am
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Credits:

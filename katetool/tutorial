@@ -1,0 +1,31 @@
+KateTool_beta3 usage & commands
+
+1. Install https://nodejs.org/en/download which you need to run .js in Windows console.
+2. Get the BIN and the .js scripts in the same folder for convenience. I got them in Desktop\KateTool. The scripts should be called "unpack.js", "repack.js" and "count.js".
+3. Open Powershell or CMD in such folder.
+
+EXTRACT BIN
+4. Type in "node unpack.js filename.BIN" (usually E0.BIN or E2.BIN). The program will let you know if something's wrong.
+5. Once it's been extracted successfully check the folder. There should be a new text file called "filenameoutput.txt" (in my case it was E0output.txt). The file is much larger now, but that's normal.
+6. Edit it; PLEASE CHECK LIST OF COMMANDS BELOW!! VERY IMPORTANT!!
+EXTRA, VERY IMPORTANT!!!!! If you wanna know the amount of HEX digits your text will have once repacked, do 'node count.js "Your text here"'. For example, you can input 'node count.js "[80]Watch out everyone[80]!(wait,10)(n)[80]Aaaa[80]![80]?(key)(close)  " and it'll tell you, once repacked, that will be 42 HEX long.
+7. Once you're done, save the text file and prepare to repack.
+
+REPACK BIN
+8. Powershell again; type in "node repack.js filenameoutput.txt" (in my case it was E0output.txt). The program will once again let you know if something's wrong.
+9. Check the folder. A new BIN file should be created called "filenamerepacked.BIN" (in my case it's E0repacked.BIN)
+10. Should be good to go, put it in the game and test. Do keep in mind it may break if the size differs from the original which is exactly 4,962,301 bytes. In the future, I hope this script can correct that automatically.
+
+
+LIST OF CUSTOM COMMANDS FOR EDITING THE TEXT FILE; VERY IMPORTANT!!
+FF 01 = (close) = Closes the dialogue box.
+FF 02 = (key) = Dialogue won't advance until a key press is detected in-game.
+FF 03 = (n) = New line in the text box, for when you wanna use more than one in your message.
+FF 04 = (clear) = Clears dialogue box, but (I assume) doesn't close it.
+FF 05 XX 00 = (wait,XX) = Insert a number in HEX and it'll wait that amount [example: (wait,10) or (wait,5E)]
+    IMPORTANT!!! WORK IN PROGRESS!! Not all values are supported in this command, only the following:
+    08, 10, 1E, 14, 15, 20, 25, 29, 30, 3C, 40, 45, 4F, 50, 5F, 58, 5C, 5E, 60, 64, 6C, 5E, E1
+    To do any amount that isn't there type [FF][05][XX][00] in the text document!!
+FF 06 XX = (color,white/blue/purple) = Change the color of the text. For example, (color,blue) makes the letters blue. Make sure to use (color,white) when you're done to restore the original color... or not...
+FF 07 = (name) = The name of the protagonist according to the game's data.
+FF 0E = (choice) = For when you want the game to display a choice box in dialogue. It has no custom values which means you can't edit what the choices say, just call them.

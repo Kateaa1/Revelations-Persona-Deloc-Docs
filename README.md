@@ -123,6 +123,7 @@ for [FF 06] the colors are such:
 
 ***Make sure you set the text back to white because it does not revert automatically***
 
+
 For certain charcters mainly puncuation and *capital letters* you need to insert [80] before them or else they will not render correctly
 
 Colons, and periods need to have their hex value entered

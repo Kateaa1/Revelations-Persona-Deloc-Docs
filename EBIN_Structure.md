@@ -4,7 +4,6 @@
 List of `uint16` pointers to each section. Needs to be multiplied by `0x800 ` to get the correct offset.
 
 There is no number of sections/pointers value, so you have to read through the values until you read zero.
-
 C# Pseudocode
 ```cs
 List<long> sectionPointers = new List<long>();
@@ -18,8 +17,7 @@ while (true)
 
 ## Section
 + `section size` equals `sectionPointers[currentSection + 1] - sectionPointers[currentSection]`
-+ Or if it's the last section, `fileSize - sectionPointers[currentSection]`
-
++ The last section pointer is just the end of the last section, thus when looping through the sections ids, do `i < numberSections-1`
 ### Header
 + Most data unknown
 + always starts with `08 00 10 80`

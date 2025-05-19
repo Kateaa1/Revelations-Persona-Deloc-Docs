@@ -3,7 +3,7 @@
 ## Start of file
 List of `uint16` pointers to each section. Needs to be multiplied by `0x800 ` to get the correct offset.
 
-Size can only be determined by running through the values until you read zero.
+There is no number of sections/pointers value, so you have to read through the values until you read zero.
 
 C# Pseudocode
 ```cs

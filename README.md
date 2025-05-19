@@ -22,7 +22,7 @@ To start i want to get some credits out of the way, as a disclaimer
 
 **Fothsid**: The hacker for Tom's patch, told me some info in the romhacking.net discord (namely the VDP1 Memory and compression stuff)
 
-**Morgana-X**: Added ebin_structure.md as well as other information
+**Morgana-X**: Added ebin_structure.md and persona_ps1_ebin.bt as well as other information
 
 **The original developers and localizers from ATLUS**
 

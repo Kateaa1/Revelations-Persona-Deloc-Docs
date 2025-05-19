@@ -22,6 +22,8 @@ To start i want to get some credits out of the way, as a disclaimer
 
 **Fothsid**: The hacker for Tom's patch, told me some info in the romhacking.net discord (namely the VDP1 Memory and compression stuff)
 
+**Morgana-X**: Added ebin_structure.md as well as other information
+
 **The original developers and localizers from ATLUS**
 
 **And everyone else who contributed to the discussion in the Classic Persona Modding server during 2022 and 2023, too many names to list but you're all great**

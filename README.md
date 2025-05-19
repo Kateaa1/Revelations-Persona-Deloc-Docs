@@ -121,6 +121,7 @@ for [FF 06] the colors are such:
 
 **01** = Yellow (This is never used in game, likely a hold-over from Devil Summoner, however it does appear in the Japanese manual)
 
+# Make sure you set the text back to white because it does not revert automatically 
 
 For certain charcters mainly puncuation and *capital letters* you need to insert [80] before them or else they will not render correctly
 

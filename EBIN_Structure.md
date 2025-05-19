@@ -28,7 +28,7 @@ while (true)
 + Starts at `sectionpointer + 0x1F8`
 + Size of `0xED0` bytes
 + Thus Ends at `sectionpointer + 0x10C8`
-+ Filled with FF, A1, 00 bytes
++ Filled with FF, 0A, 00 bytes
 
 ### Opcode/Instructions/Text Etc
 + Starts at `sectionpointer + 0x10C8`

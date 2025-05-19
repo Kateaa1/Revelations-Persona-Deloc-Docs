@@ -1,0 +1,54 @@
+//------------------------------------------------
+//--- 010 Editor v14.0 Binary Template
+//
+//      File: persona_ps1_ebin.bt
+//   Authors: morgana
+//   Version: 1.0
+//   Purpose: 
+//  Category: 
+// File Mask: *.BIN
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+LittleEndian(); 
+local long offsets[400];
+local ushort val = 1;
+local int numOffsets = 0;
+local int i =0;
+local long sectionsize = 0;
+//SetBackColor(cLtPurple );
+
+while( !FEof() && val != 0)
+{
+    val =  ReadUShort( FTell() );
+    Printf("%i\n",val);
+    FSkip(2);
+    if (val == 0) break;
+    offsets[numOffsets] = 0x800 * val;
+    Printf("%i\n",offsets[numOffsets]);
+    numOffsets++;
+}
+
+AddBookmark( 0, "SectionOffsets", 
+         "int16", numOffsets, cWhite, cDkBlue   );
+
+//SetBackColor(cNone );
+
+for (i=0; i<numOffsets; i++)
+{
+    FSeek(offsets[i]);
+    Printf("%i\n", FTell());
+    SetBackColor(cBlue);
+    FSkip(4);
+    if (FEof()) break;
+    sectionsize = i < numOffsets-1 ? offsets[i+1] - (offsets[i]) : FileSize();
+    
+    AddBookmark( offsets[i], "Header", 
+         "byte", 0x1F8, cNone, cDkPurple);
+    AddBookmark( offsets[i] + 0x1F8, "Metadata", 
+         "byte", 0xED0, cNone, 0x775533);
+    AddBookmark( offsets[i] + 0x1F8 + 0xED0, "Data", 
+         "byte", sectionsize - 0x1F8 - 0xED0, cNone, 0x335577 );
+    //FSeek(offsets[i]+sectionsize);
+   // SetBackColor(cNone );
+}

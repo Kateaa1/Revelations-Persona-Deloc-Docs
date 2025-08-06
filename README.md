@@ -136,7 +136,7 @@ The values for [FF 0E] are contained somewhere else in the game, if its the same
 
 ## Using KateTool
 
-KateTool is 3 JavaScript Scripts that let you convert the game's text files into .txt and back again, as well as count to make sure you don't go over the 30 byte-per-line limits
+KateTool is 3 JavaScript Scripts that let you convert the game's text files into .txt and back again, as well as count to make sure you don't go over the 30 character-per-line limits
 
 The tool works on Windows and Linux (on Linux just check the game's ADV folder for the output), and the code is in the repo, you will need node.js to run it.
 

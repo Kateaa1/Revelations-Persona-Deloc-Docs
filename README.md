@@ -67,10 +67,6 @@ If you open the files in a hex editor you'll see a few main things
 
 3. Commands, these get their own section below in the **editing text** part of the writeup, they control things like when to wait for the player to press a button, newlines, and some other stuffs.
 
-Text is, confusingly rendered to VDP1 memory, which is *wrong*, VDP1 is usually for more intensive effects and models, not for simple text, this is not the only oddity about the game (This information came from Fothsid)
-
-This article about the Sega Saturn's implimentation explains more: https://segaretro.org/Sega_Saturn/Hardware_comparison
-
 The game's font is quite large, because of this you can only have 30 characters per text box before clearing it or using [FF 04], if a line is **exactly 30 characters long** then the game will automatically insert a newline (yay)
 not doing so will lead to a crash, text not being rendered, or text not being rendered correctly
 
